@@ -1,28 +1,31 @@
 import { LogType } from "./types";
 
 export interface Options {
-    method: string
-    body?: string;
-    headers?: { [key: string]: string };
-    geoLocation?: string;
-    paramValues?: { [key: string]: string };
-    context?: { contextAddress: string, contextMessage: string };
+  method: string;
+  body?: string;
+  headers?: { [key: string]: string };
+  geoLocation?: string;
+  paramValues?: { [key: string]: string };
+  context?: { contextAddress: string; contextMessage: string };
+  additionalClientOptions?: {
+    cipherSuites?: string[];
+    supportedProtocolVersions?: ("TLS1_2" | "TLS1_3")[];
+  };
 }
 
 export interface secretOptions {
   headers?: { [key: string]: string };
-  responseMatches?: { type: 'regex' | 'contains', value: string }[];
-  responseRedactions?: { regex?: string, jsonPath?: string, xPath?: string }[];
+  responseMatches?: { type: "regex" | "contains"; value: string }[];
+  responseRedactions?: { regex?: string; jsonPath?: string; xPath?: string }[];
   cookieStr?: string;
   paramValues?: { [key: string]: string };
 }
 
 export interface SendLogsParams {
-    sessionId: string;
-    logType: LogType;
-    applicationId: string;
+  sessionId: string;
+  logType: LogType;
+  applicationId: string;
 }
-
 
 export interface Proof {
   identifier: string;
@@ -37,7 +40,6 @@ export interface WitnessData {
   url: string;
 }
 
-
 export interface ProviderClaimData {
   provider: string;
   parameters: string;
@@ -47,4 +49,3 @@ export interface ProviderClaimData {
   identifier: string;
   epoch: number;
 }
-
