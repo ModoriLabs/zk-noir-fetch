@@ -4,7 +4,7 @@ import { Options, secretOptions } from "./interfaces";
 import {
   assertCorrectnessOfOptions,
   validateURL,
-  sendLogs,
+  // sendLogs,
   validateApplicationIdAndSecret,
   transformProof,
 } from "./utils";
@@ -45,11 +45,11 @@ export class ReclaimClient {
     if (options !== undefined) {
       assertCorrectnessOfOptions(options);
     }
-    await sendLogs({
-      sessionId: this.sessionId,
-      logType: LogType.VERIFICATION_STARTED,
-      applicationId: this.applicationId,
-    });
+    // await sendLogs({
+    //   sessionId: this.sessionId,
+    //   logType: LogType.VERIFICATION_STARTED,
+    //   applicationId: this.applicationId,
+    // });
 
     let attempt = 0;
     while (attempt < retries) {
@@ -90,20 +90,20 @@ export class ReclaimClient {
             );
           }
 
-          await sendLogs({
-            sessionId: this.sessionId,
-            logType: LogType.PROOF_GENERATED,
-            applicationId: this.applicationId,
-          });
+          // await sendLogs({
+          //   sessionId: this.sessionId,
+          //   logType: LogType.PROOF_GENERATED,
+          //   applicationId: this.applicationId,
+          // });
         return transformProof(claim);
       } catch (error) {
         attempt++;
         if (attempt >= retries) {
-          await sendLogs({
-            sessionId: this.sessionId,
-            logType: LogType.ERROR,
-            applicationId: this.applicationId,
-          });
+          // await sendLogs({
+          //   sessionId: this.sessionId,
+          //   logType: LogType.ERROR,
+          //   applicationId: this.applicationId,
+          // });
           logger.error(error);
           throw error;
         }

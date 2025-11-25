@@ -1,6 +1,6 @@
 {
-  "name": "@reclaimprotocol/zk-fetch",
-  "version": "0.6.0",
+  "name": "@modori-labs/zk-fetch",
+  "version": "0.1.0",
   "description": "HTTPS Fetch with a zkproof of correctness of fetch",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -20,8 +20,8 @@
     "download:circuits": "node scripts/download-files",
     "test": "vitest"
   },
-  "author": "madhavanmalolan",
-  "license": "SEE LICENSE IN https://github.com/reclaimprotocol/zk-fetch/blob/master/LICENSE.md",
+  "author": "ModoriLabs (forked from reclaimprotocol)",
+  "license": "AGPL-3.0",
   "dependencies": {
     "@reclaimprotocol/attestor-core": "4.0.3",
     "@reclaimprotocol/tls": "github:reclaimprotocol/tls#8e0669a220341432673a20bb51f9339555701ef4",
@@ -41,12 +41,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.reclaimprotocol.org/integrations/offchain/zk-fetch"
+    "url": "https://github.com/ModoriLabs/zk-noir-fetch"
   },
   "keywords": [
     "zk",
     "fetch",
-    "reclaimprotocol"
+    "reclaimprotocol",
+    "modorilabs"
   ],
   "resolutions": {
     "@reclaimprotocol/tls": "github:reclaimprotocol/tls#8e0669a220341432673a20bb51f9339555701ef4"
