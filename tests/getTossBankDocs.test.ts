@@ -6,9 +6,9 @@ describe("TossBank Document Tests", () => {
 
   beforeAll(async () => {
     tossBankProof = await getTossBankDocs();
-    console.log("=== TossBank Proof 결과 ===");
+    console.log("=== TossBank Proof ===");
     console.log("Identifier:", tossBankProof?.identifier);
-    console.log("추출된 값들:", tossBankProof?.extractedParameterValues);
+    console.log("Extracted values:", tossBankProof?.extractedParameterValues);
     console.log(
       "Context:",
       JSON.parse(tossBankProof?.claimData?.context || "{}")
