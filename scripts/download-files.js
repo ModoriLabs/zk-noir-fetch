@@ -30,6 +30,7 @@ const TARGET_DIRS = [
     "@reclaimprotocol",
     "zk-symmetric-crypto"
   ),
+  path.resolve(process.cwd(), "node_modules", "zk-symmetric-crypto-test"),
 ];
 
 // Logger
