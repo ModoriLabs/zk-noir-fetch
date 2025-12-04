@@ -23,7 +23,8 @@
   "author": "madhavanmalolan",
   "license": "SEE LICENSE IN https://github.com/reclaimprotocol/zk-fetch/blob/master/LICENSE.md",
   "dependencies": {
-    "@reclaimprotocol/attestor-core": "file:../attestor-core",
+    "@noir-lang/noir_js": "^1.0.0-beta.3",
+    "@reclaimprotocol/attestor-core": "github:ModoriLabs/attestor-core#a7a6272bba02762b6c0bbe330469e7a7333ab383",
     "@reclaimprotocol/tls": "github:reclaimprotocol/tls#8e0669a220341432673a20bb51f9339555701ef4",
     "@swc/core": "^1.6.13",
     "ethers": "^5.7.2",
