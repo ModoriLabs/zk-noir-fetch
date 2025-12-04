@@ -1,6 +1,6 @@
-import { ReclaimClient } from "../src";
 import { config } from "dotenv";
 config();
+import { ReclaimClient } from "../src";
 
 export const getTossBankDocs = async () => {
   // Get your APP_ID and APP_SECRET from the Reclaim Devtool (https://dev.reclaimprotocol.org/)
@@ -40,5 +40,5 @@ export const getTossBankDocs = async () => {
     responseRedactions: [],
   };
 
-  return await reclaim.zkFetch(url, options, privateOptions);
+  return await reclaim.zkFetch(url, options, privateOptions, "barretenberg");
 };

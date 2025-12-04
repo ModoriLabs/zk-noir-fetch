@@ -38,6 +38,7 @@ export class ReclaimClient {
     url: string,
     options?: Options,
     secretOptions?: secretOptions,
+    zkEngine: "snarkjs" | "gnark" | "expander" | "barretenberg" = "snarkjs",
     retries = 1,
     retryInterval = 1000
   ) {
@@ -89,9 +90,9 @@ export class ReclaimClient {
             "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
           logger: logger,
           client: {
-            url: ATTESTOR_NODE_URL,
+            url: process.env.ATTESTOR_URL || ATTESTOR_NODE_URL,
           },
-          zkEngine: "snarkjs",
+          zkEngine: zkEngine,
         });
 
         logger.info(`[zkFetch] createClaimOnAttestor completed successfully`);
